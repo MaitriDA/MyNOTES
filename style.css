@@ -1,0 +1,239 @@
+/* LINK TO GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url('images/wooden.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+
+
+/* HEADER - BRANDNAEM AND SEARCH BOX */
+header{
+    border: 2px solid;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    opacity: 0.52;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#brandName{
+    color: rgb(243, 243, 243);
+    opacity: 1;
+    font-size: 40px;
+    margin-left: 15px;
+    font-family: 'Fugaz One', cursive;
+}
+
+#searchBox{
+    display: flex;
+    color: rgb(243, 243, 243);
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 500px;
+    margin-right: 15px;
+    margin-top: 15px;
+} 
+#searchTxt{
+    margin-left: 10px;
+}
+.form-control{
+    width: 330px;
+}
+.bi-search{
+    color: white;
+    margin-bottom: 35px;
+}
+.icon{
+    font-size: 48px;
+}
+
+/* ADD A NOTE SECTION */
+#add{
+    color: rgb(0, 255, 0);
+    margin-left: -25px;
+    margin-bottom: 10px;
+}
+.addText{
+    border: 1px solid #b7956f;
+    display: block;
+    margin: auto;
+    width: 30%;
+    margin-top: 15px;
+}
+.textArea{
+    display: flex;
+    margin: 15px;
+}
+#textAreaHeading{
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+}
+.textAreaCenter{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.btn{
+    display: block;
+    margin: auto; 
+    border-radius: 25px;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    opacity: 0.65;
+}
+.textAdd{
+    font-size: 66px;
+    font-weight: 600;
+    margin-top: -39px;
+    margin-left: -11px;
+}
+#add:hover{
+    background-color: green;
+    color: white;
+}
+
+
+/* DISPLAY NOTES SECTION */
+.delete:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.delete{
+    color: rgb(255, 0, 0);
+    margin-top: -45px;
+    margin-right: 2px;
+    height: 35px;
+    width: 35px;
+}
+.textDelete{
+    font-size: 66px;
+    font-weight: 600;
+    margin-top: -47px;
+    margin-left: -9px;
+}
+
+.cardTitle{ 
+    padding: 5px; 
+    font-size: 1.5rem; 
+    height: 2.5rem;
+    font-weight: bold;
+}
+.notesContainer{
+    height: 100%;
+    width: 100%;
+    border: 2px solid none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:left;
+}
+.notesArea{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#notesCard{
+    width: 290px;
+    background-color: rgb(255 255 187);
+    min-height: 230px;
+    box-shadow: 5px 5px 4px rgb(88, 88, 88);
+    position: relative;
+}
+.cardTxt{
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 1.7rem;
+    font-family: 'Caveat', cursive;
+    line-height: 96%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+#bottom{     
+    position: absolute;           
+    bottom:0;                          
+    right: 0;
+    margin-right: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 15px;
+}
+#titleBar{
+    background-color:  #ffff87;
+    display: flex;
+    justify-content: space-between;
+}
+#titleBar #check{
+    height: 25px;
+    width: 25px;
+    margin: 7px;
+    display: block;
+    position: relative;
+    z-index: 5;
+    margin-left: 70px;
+    opacity: 0;
+}
+.hamburgerLines{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 9px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 255px;
+}
+.hamburgerLines .line{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: black;
+    border-radius: 10px;
+}
+.downPanel{
+    border: 2px solid rgb(255, 255, 255);
+    display: none;
+    width: 100%;
+    position: absolute;
+    margin-top: 47px;
+    background: rgb(255, 255, 255);
+}
+.cross{
+    display: none;
+    position: absolute;
+    margin-left: 257px;
+    font-size: 30px;
+    margin-top: -5px;
+}
+#notesCard input[type="checkbox"]:checked ~ .downPanel{
+    display: block;
+    opacity: 1;
+}
+#titleBar input[type="checkbox"]:checked ~ .hamburgerLines{
+    display: none;
+}
+#titleBar input[type="checkbox"]:checked ~ .cross{
+    display: block;
+}
+#colorContainer{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+.colorPick{
+    background-color: white;
+    flex: 1;
+}
+.active{
+    border: 1px solid black;
+}
