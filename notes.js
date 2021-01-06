@@ -86,7 +86,7 @@
          html += `<div id="singleNote">
          <div id="notesCard">
              <div id="titleBar">
-                 <h2 class="cardTitle">This is Heading</h2>
+                 <h2 class="cardTitle">${element.title}</h2>
                  <input type="checkbox" id="check">
                  <div class="downPanel">
                      <div id="colorContainer">
@@ -106,8 +106,8 @@
                  </div>
                  <div class="cross">X</div>
              </div>
-             <p class="cardTxt">This is the description</p>
-             <div id="bottom">date</div>
+             <p class="cardTxt">${element.text}</p>
+             <div id="bottom">${element.fixed}</div>
          </div>
      </div>`;
      });
@@ -135,22 +135,22 @@
       showNotes();
   }
 
-//    SEARCH
-//   let search = document.getElementById("searchTxt");
-//   search.addEventListener("input", function () {
-//       let inputVal = search.value.toLowerCase();
-//       console.log('Input Event Fired', inputVal);
-//       let noteCards = document.getElementsByClassName('notesCard');
-//       Array.from(noteCards).forEach(function (element) {
-//           let cardTxt = element.getElementsByTagName("p")[0].innerText;
-//           if (cardTxt.includes(inputVal)) {
-//               element.style.display = "block";
-//           }
-//           else {
-//               element.style.display = "none";
-//           }
-//       })
-//   })
+//SEARCH
+let search = document.getElementById("searchTxt");
+search.addEventListener("input", function () {
+    let inputVal = search.value.toLowerCase();
+    console.log('Input Event Fired', inputVal);
+    let noteCards = document.getElementById('notesCard');
+    Array.from(noteCards).forEach(function (element) {
+        let cardTxt = element.getElementsByTagName("p")[0].innerText;
+        if (cardTxt.includes(inputVal)) {
+            element.style.display = "block";
+        }
+        else {
+            element.style.display = "none";
+        }      
+    })  
+})
 
 
 let colorList=['#ffff87','#ffc862','#ffc0cb','#89ff89','#94e8ff','#bdbdbd'];
