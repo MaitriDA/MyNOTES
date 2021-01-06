@@ -89,13 +89,13 @@
                  <h2 class="cardTitle">${element.title}</h2>
                  <input type="checkbox" id="check">
                  <div class="downPanel">
-                     <div id="colorContainer">
-                         <div class='colorPick'></div>
-                         <div class='colorPick'></div>
-                         <div class='colorPick'></div>
-                         <div class='colorPick'></div>
-                         <div class='colorPick'></div>
-                         <div class='colorPick'></div>
+                     <div class="colorContainer">
+                         <div class='colorPick' id='yellow'></div>
+                         <div class='colorPick' id='orange'></div>
+                         <div class='colorPick' id='pink'></div>
+                         <div class='colorPick' id='green'></div>
+                         <div class='colorPick' id='blue'></div>
+                         <div class='colorPick' id='gray'></div>
                      </div>
                      <button id="${index}" onclick="deleteNote(this.id)" class="delete">delete</button>
                  </div>
@@ -152,8 +152,22 @@ search.addEventListener("input", function () {
     })  
 })
 
+var yellow=document.getElementById("yellow");
+var yellowCss=window.getComputedStyle(yellow, null).getPropertyValue("background-color");
+var orange=document.getElementById("orange");
+var orangeCss=window.getComputedStyle(orange, null).getPropertyValue("background-color");
+var pink=document.getElementById("pink");
+var pinkCss=window.getComputedStyle(pink, null).getPropertyValue("background-color");
+var green=document.getElementById("green");
+var greenCss=window.getComputedStyle(green, null).getPropertyValue("background-color");
+var blue=document.getElementById("blue");
+var blueCss=window.getComputedStyle(blue, null).getPropertyValue("background-color");
+var gray=document.getElementById("gray");
+var grayCss=window.getComputedStyle(gray, null).getPropertyValue("background-color");
 
-let colorList=['#ffff87','#ffc862','#ffc0cb','#89ff89','#94e8ff','#bdbdbd'];
+
+
+let colorList=[yellowCss,orangeCss,pinkCss,greenCss,blueCss,grayCss];
 
 let colorPicker=document.getElementsByClassName('colorPick');
 let output=document.getElementById('titleBar');
@@ -172,5 +186,6 @@ changeColor=(color,active)=>{
     }
     colorPicker[active].classList.add('active');
     output.style.backgroundColor=color;
-    notesCard.style.backgroundColor=colorListOther[active];
+    let notescolor=document.getElementById('notesCard')
+    notescolor.style.backgroundColor=colorListOther[active];
 }

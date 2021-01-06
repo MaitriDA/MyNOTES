@@ -220,7 +220,7 @@ header{
 #titleBar input[type="checkbox"]:checked ~ .cross{
     display: block;
 }
-#colorContainer{
+.colorContainer{
     display: flex;
     justify-content: space-around;
     height: 50px;
@@ -231,4 +231,22 @@ header{
 }
 .active{
     border: 1px solid black;
+}
+#yellow{
+    background-color: #ffff87;
+}
+#orange{
+    background-color: #ffc862;
+}
+#pink{
+    background-color: #ffc0cb;
+}
+#green{
+    background-color: #89ff89;
+}
+#blue{
+    background-color: #94e8ff;
+}
+#gray{
+    background-color: #bdbdbd;
 }
