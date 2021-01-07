@@ -228,25 +228,26 @@ header{
 .colorPick{
     background-color: white;
     flex: 1;
+    border: none;
 }
 .active{
-    border: 1px solid black;
+    border: 0.5px solid black;
 }
-#yellow{
+.yellow{
     background-color: #ffff87;
 }
-#orange{
+.orange{
     background-color: #ffc862;
 }
-#pink{
+.pink{
     background-color: #ffc0cb;
 }
-#green{
+.green{
     background-color: #89ff89;
 }
-#blue{
+.blue{
     background-color: #94e8ff;
 }
-#gray{
+.gray{
     background-color: #bdbdbd;
 }

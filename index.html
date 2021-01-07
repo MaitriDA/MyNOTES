@@ -66,14 +66,14 @@
                         <input type="checkbox" id="check">
                         <div class="downPanel">
                             <div class="colorContainer">
-                                <div class='colorPick'></div>
-                                <div class='colorPick'></div>
-                                <div class='colorPick'></div>
-                                <div class='colorPick'></div>
-                                <div class='colorPick'></div>
-                                <div class='colorPick'></div>
+                                <button id="yellow" class='colorPick'></button>
+                                <button id="orange" class='colorPick'></button>
+                                <button id="pink" class='colorPick'></button>
+                                <button id="green" class='colorPick'></button>
+                                <button id="blue" class='colorPick'></button>
+                                <button id="gray" class='colorPick'></button>
                             </div>
-                            <button class="delete">delete</button>
+                            <button id="${index}" onclick="deleteNote(this.id)" class="delete">delete</button>
                         </div>
                         <div class="hamburgerLines">
                             <span class="line line1"></span>
@@ -84,8 +84,8 @@
                     </div>
                     <p class="cardTxt">This is the description</p>
                     <div id="bottom">date</div>
-                </div> -->
-            </div>
+                </div> 
+            </div> -->
         </div>
     </div>
     <script src="notes.js"></script>
