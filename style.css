@@ -136,7 +136,7 @@ header{
     margin-left: 50px;
     margin-right: 50px;
 }
-#notesCard{
+.notesCard{
     width: 290px;
     background-color: rgb(255 255 187);
     min-height: 230px;
@@ -210,7 +210,7 @@ header{
     font-size: 30px;
     margin-top: -5px;
 }
-#notesCard input[type="checkbox"]:checked ~ .downPanel{
+.notesCard input[type="checkbox"]:checked ~ .downPanel{
     display: block;
     opacity: 1;
 }

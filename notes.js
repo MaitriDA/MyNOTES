@@ -84,7 +84,7 @@
       let html = "";
       notesObj.forEach(function (element, index) {
           html += `<div id="singleNote">
-                <div id="notesCard">
+                <div class="notesCard" id="Card">
                 <div id="titleBar">
                     <h2 class="cardTitle">${element.title}</h2>
                     <input type="checkbox" id="check">
@@ -136,50 +136,50 @@
    }
 
  //SEARCH
- let search = document.getElementById("searchTxt");
- search.addEventListener("input", function () {
-     let inputVal = search.value.toLowerCase();
-     console.log('Input Event Fired', inputVal);
-     let noteCards = document.getElementById('notesCard');
-     Array.from(noteCards).forEach(function (element) {
-         let cardTxt = element.getElementsByTagName("p")[0].innerText;
-         if (cardTxt.includes(inputVal)) {
-             element.style.display = "block";
+ let search=document.getElementById('searchTxt');
+ search.addEventListener("input",function(){
+     let inputVal=search.value.toLowerCase();
+     console.log('Input Event Fired',inputVal);
+     let noteCards=document.getElementsByClassName('notesCard');
+     Array.from(noteCards).forEach(function(element){
+         let cardTxt=element.getElementsByTagName("p")[0].innerText;
+         if(cardTxt.includes(inputVal)){
+             element.style.display="block";
          }
-         else {
-             element.style.display = "none";
-         }      
-     })  
+         else{
+             element.style.display="none";
+         }
+     })
  })
 
 //COLOR PANEL
 function yellowCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#ffff87';
-    document.getElementById("notesCard").style.backgroundColor='rgb(255 255 187)';
+    document.getElementById("Card").style.backgroundColor ='rgb(255 255 187)';
 }
 function orangeCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#ffc862';
-    document.getElementById("notesCard").style.backgroundColor='rgb(255 227 174)';
+    document.getElementById("Card").style.backgroundColor='rgb(255 227 174)';
 }
 function pinkCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#ffc0cb';
-    document.getElementById("notesCard").style.backgroundColor='rgb(255 227 232)';
+    document.getElementById("Card").style.backgroundColor='rgb(255 227 232)';
 }
 function greenCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#89ff89';
-    document.getElementById("notesCard").style.backgroundColor='rgb(191 255 191)';
+    document.getElementById("Card").style.backgroundColor='rgb(191 255 191)';
 }
 function blueCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#94e8ff';
-    document.getElementById("notesCard").style.backgroundColor='rgb(207 245 255)';
+    document.getElementById("Card").style.backgroundColor='rgb(207 245 255)';
 }
 function grayCss(index){
     console.log(index);
     document.getElementById("titleBar").style.backgroundColor = '#bdbdbd';
-    document.getElementById("notesCard").style.backgroundColor='rgb(230 230 230)';
+    document.getElementById("Card").style.backgroundColor='rgb(230 230 230)';
 }
