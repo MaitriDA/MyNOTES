@@ -60,18 +60,22 @@
       else {
           notesObj = JSON.parse(notes);
       }
-      let myObj = {
-          fixed: date,
+      var tcolor="#ffff87";
+      var ncolor="rgb(255 255 187)"
+      var myObj = {
           title: addTitle.value,
-          text: addTxt.value
-      }
+          text: addTxt.value,
+          fixed: date,
+          titleColor: tcolor,
+          notesColor: ncolor
+      };
       notesObj.push(myObj);
       localStorage.setItem("notes", JSON.stringify(notesObj));
       addTxt.value = "";
       addTitle.value = "";
       showNotes();
-  })
-
+    })
+    
  //DISPLAY THE NOTES IN TEH NOTES SECTION
   function showNotes() {
       let notes = localStorage.getItem("notes");
@@ -119,67 +123,69 @@
            notesElm.innerHTML = `Nothing to Show`
        }
    }
+   var getNotes=localStorage.getItem("notes[0]");
+   console.log("getnotes",getNotes);
 
  //DELETE NOTE
    function deleteNote(index) {
        console.log('I am deleting', index);
-       let notes = localStorage.getItem("notes");
+       var notes = localStorage.getItem("notes");
        if (notes == null) {
            notesObj = [];
        }
        else {
            notesObj = JSON.parse(notes);
        }
+       console.log("now",notesObj[1]);
        notesObj.splice(index, 1);
        localStorage.setItem("notes", JSON.stringify(notesObj));
        showNotes();
    }
-
- //SEARCH
- let search=document.getElementById('searchTxt');
- search.addEventListener("input",function(){
-     let inputVal=search.value.toLowerCase();
-     console.log('Input Event Fired',inputVal);
-     let noteCards=document.getElementsByClassName('notesCard');
-     Array.from(noteCards).forEach(function(element){
-         let cardTxt=element.getElementsByTagName("p")[0].innerText;
-         if(cardTxt.includes(inputVal)){
-             element.style.display="block";
-         }
-         else{
-             element.style.display="none";
-         }
-     })
+   //SEARCH
+   let search=document.getElementById('searchTxt');
+   search.addEventListener("input",function(){
+       let inputVal=search.value.toLowerCase();
+       console.log('Input Event Fired',inputVal);
+       let noteCards=document.getElementsByClassName('notesCard');
+       Array.from(noteCards).forEach(function(element){
+           let cardTxt=element.getElementsByTagName("p")[0].innerText;
+           if(cardTxt.includes(inputVal)){
+               element.style.display="block";
+            }
+            else{
+                element.style.display="none";
+            }
+        })
  })
+ 
+ var colorP=localStorage.getItem("notes");
+ var colorPanel=JSON.parse(colorP);
+ console.log("colorPanel",colorPanel[2]);
+ var colorPanelObject=colorPanel[1];
+ console.log(colorPanelObject.title);
 
-//COLOR PANEL
-function yellowCss(index,length){
-    console.log(index);
-    document.getElementById(index).style.backgroundColor = '#ffff87';
-    document.getElementById(index+length+1).style.backgroundColor ='rgb(255 255 187)';
-}
-function orangeCss(index,length){
-    console.log(index);
-    document.getElementById(index).style.backgroundColor = '#ffc862';
-    document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 174)';
-}
-function pinkCss(index,length){
-    console.log(index);
-    document.getElementById(index).style.backgroundColor = '#ffc0cb';
-    document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 232)';
-}
+ //COLOR PANEL
+ function yellowCss(index,length){
+     document.getElementById(index).style.backgroundColor = '#ffff87';
+     document.getElementById(index+length+1).style.backgroundColor ='rgb(255 255 187)';
+    }
+    function orangeCss(index,length){
+        document.getElementById(index).style.backgroundColor = '#ffc862';
+        document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 174)';
+    }
+    function pinkCss(index,length){
+        document.getElementById(index).style.backgroundColor = '#ffc0cb';
+        document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 232)';
+    }
 function greenCss(index,length){
-    console.log(index);
     document.getElementById(index).style.backgroundColor = '#89ff89';
     document.getElementById(index+length+1).style.backgroundColor='rgb(191 255 191)';
 }
 function blueCss(index,length){
-    console.log(index);
     document.getElementById(index).style.backgroundColor = '#94e8ff';
     document.getElementById(index+length+1).style.backgroundColor='rgb(207 245 255)';
 }
 function grayCss(index,length){
-    console.log(index);
     document.getElementById(index).style.backgroundColor = '#bdbdbd';
     document.getElementById(index+length+1).style.backgroundColor='rgb(230 230 230)';
 }
