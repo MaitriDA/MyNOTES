@@ -162,12 +162,12 @@ header{
     font-weight: 500;
     padding-top: 15px;
 }
-#titleBar{
+.titleBar{
     background-color:  #ffff87;
     display: flex;
     justify-content: space-between;
 }
-#titleBar #check{
+.titleBar #check{
     height: 25px;
     width: 25px;
     margin: 7px;
@@ -214,10 +214,10 @@ header{
     display: block;
     opacity: 1;
 }
-#titleBar input[type="checkbox"]:checked ~ .hamburgerLines{
+.titleBar input[type="checkbox"]:checked ~ .hamburgerLines{
     display: none;
 }
-#titleBar input[type="checkbox"]:checked ~ .cross{
+.titleBar input[type="checkbox"]:checked ~ .cross{
     display: block;
 }
 .colorContainer{

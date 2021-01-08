@@ -84,18 +84,18 @@
       let html = "";
       notesObj.forEach(function (element, index) {
           html += `<div id="singleNote">
-                <div class="notesCard" id="Card">
-                <div id="titleBar">
+                <div class="notesCard" id="${index+notesObj.length+1}">
+                <div class="titleBar" id="${index}">
                     <h2 class="cardTitle">${element.title}</h2>
                     <input type="checkbox" id="check">
                     <div class="downPanel">
                         <div class="colorContainer">
-                            <button id="${index}" class='colorPick yellow' onclick="yellowCss(this.id)"></button>
-                            <button id="${index}" class='colorPick orange' onclick="orangeCss(this.id)"></button>
-                            <button id="${index}" class='colorPick pink' onclick="pinkCss(this.id)"></button>
-                            <button id="${index}" class='colorPick green' onclick="greenCss(this.id)"></button>
-                            <button id="${index}" class='colorPick blue' onclick="blueCss(this.id)"></button>
-                            <button id="${index}" class='colorPick gray' onclick="grayCss(this.id)"></button>
+                            <button id="yellow" class='colorPick yellow' onclick="yellowCss(${index},${notesObj.length})"></button>
+                            <button id="orange" class='colorPick orange' onclick="orangeCss(${index},${notesObj.length})"></button>
+                            <button id="pink" class='colorPick pink' onclick="pinkCss(${index},${notesObj.length})"></button>
+                            <button id="green" class='colorPick green' onclick="greenCss(${index},${notesObj.length})"></button>
+                            <button id="blue" class='colorPick blue' onclick="blueCss(${index},${notesObj.length})"></button>
+                            <button id="gray" class='colorPick gray' onclick="grayCss(${index},${notesObj.length})"></button>
                         </div>
                         <button id="${index}" onclick="deleteNote(this.id)" class="delete">delete</button>
                     </div>
@@ -153,33 +153,33 @@
  })
 
 //COLOR PANEL
-function yellowCss(index){
+function yellowCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#ffff87';
-    document.getElementById("Card").style.backgroundColor ='rgb(255 255 187)';
+    document.getElementById(index).style.backgroundColor = '#ffff87';
+    document.getElementById(index+length+1).style.backgroundColor ='rgb(255 255 187)';
 }
-function orangeCss(index){
+function orangeCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#ffc862';
-    document.getElementById("Card").style.backgroundColor='rgb(255 227 174)';
+    document.getElementById(index).style.backgroundColor = '#ffc862';
+    document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 174)';
 }
-function pinkCss(index){
+function pinkCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#ffc0cb';
-    document.getElementById("Card").style.backgroundColor='rgb(255 227 232)';
+    document.getElementById(index).style.backgroundColor = '#ffc0cb';
+    document.getElementById(index+length+1).style.backgroundColor='rgb(255 227 232)';
 }
-function greenCss(index){
+function greenCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#89ff89';
-    document.getElementById("Card").style.backgroundColor='rgb(191 255 191)';
+    document.getElementById(index).style.backgroundColor = '#89ff89';
+    document.getElementById(index+length+1).style.backgroundColor='rgb(191 255 191)';
 }
-function blueCss(index){
+function blueCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#94e8ff';
-    document.getElementById("Card").style.backgroundColor='rgb(207 245 255)';
+    document.getElementById(index).style.backgroundColor = '#94e8ff';
+    document.getElementById(index+length+1).style.backgroundColor='rgb(207 245 255)';
 }
-function grayCss(index){
+function grayCss(index,length){
     console.log(index);
-    document.getElementById("titleBar").style.backgroundColor = '#bdbdbd';
-    document.getElementById("Card").style.backgroundColor='rgb(230 230 230)';
+    document.getElementById(index).style.backgroundColor = '#bdbdbd';
+    document.getElementById(index+length+1).style.backgroundColor='rgb(230 230 230)';
 }
