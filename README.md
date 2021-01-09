@@ -8,3 +8,4 @@ Some of the key features are:
  <hr>
  
  Screen Shot
+ ![MyNOTES](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/MyNOTES.JPG)
