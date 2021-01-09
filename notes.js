@@ -1,7 +1,7 @@
 console.log('Welcome to my note app');
 showNotes();
 
-//CALCULATION OF THE DATE
+//CALCULATE THE DATE
 function formatDate(pd) {
     var date = pd.getDate();
     var month = pd.getMonth();
@@ -76,7 +76,7 @@ addBtn.addEventListener("click", function (e) {
     showNotes();
 })
 
-//DISPLAY THE NOTES IN TEH NOTES SECTION
+//DISPLAY THE NOTES 
 function showNotes() {
 
     let notes = localStorage.getItem("notes");
@@ -88,6 +88,7 @@ function showNotes() {
     }
     let html = "";
     notesObj.forEach(function (element, index) {
+        //COLOR PANEL
         var getTitleFronLS=notesObj[index].titleColor;
         let newTitleColor;
         let newNotesColor;
@@ -115,6 +116,7 @@ function showNotes() {
             newTitleColor='#bdbdbd';
             newNotesColor='rgb(230 230 230)';
         }
+        
         html += `<div id="singleNote">
                 <div class="notesCard" id="${index + notesObj.length + 1}" style="background-color: ${newNotesColor}">
                 <div class="titleBar" id="${index}" style="background-color: ${newTitleColor}">
@@ -122,12 +124,12 @@ function showNotes() {
                     <input type="checkbox" id="check">
                     <div class="downPanel">
                         <div class="colorContainer">
-                            <button id="yellow" class='colorPick yellow' onclick="yellowCss(${index},${notesObj.length})"></button>
-                            <button id="orange" class='colorPick orange' onclick="orangeCss(${index},${notesObj.length})"></button>
-                            <button id="pink" class='colorPick pink' onclick="pinkCss(${index},${notesObj.length})"></button>
-                            <button id="green" class='colorPick green' onclick="greenCss(${index},${notesObj.length})"></button>
-                            <button id="blue" class='colorPick blue' onclick="blueCss(${index},${notesObj.length})"></button>
-                            <button id="gray" class='colorPick gray' onclick="grayCss(${index},${notesObj.length})"></button>
+                            <button id="yellow" class='colorPick yellow' onclick="setLocalStorage(${index},${notesObj.length},'#ffff87','rgb(255 255 187)')"></button>
+                            <button id="orange" class='colorPick orange' onclick="setLocalStorage(${index},${notesObj.length},'#ffc862','rgb(255 227 174)')"></button>
+                            <button id="pink" class='colorPick pink' onclick="setLocalStorage(${index},${notesObj.length},'#ffc0cb','rgb(255 227 232)')"></button>
+                            <button id="green" class='colorPick green' onclick="setLocalStorage(${index},${notesObj.length},'#89ff89','rgb(191 255 191)')"></button>
+                            <button id="blue" class='colorPick blue' onclick="setLocalStorage(${index},${notesObj.length},'#94e8ff','rgb(207 245 255)')"></button>
+                            <button id="gray" class='colorPick gray' onclick="setLocalStorage(${index},${notesObj.length},'#bdbdbd','rgb(230 230 230)')"></button>
                         </div>
                         <button id="${index}" onclick="deleteNote(this.id)" class="delete"><i class="fa fa-trash-o"> DELETE</i></button>
                     </div>
@@ -169,7 +171,7 @@ function deleteNote(index) {
     localStorage.setItem("notes", JSON.stringify(notesObj));
     showNotes();
 }
-//SEARCH
+//SEARCH NOTE
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function () {
     let inputVal = search.value.toLowerCase();
@@ -186,46 +188,13 @@ search.addEventListener("input", function () {
     })
 })
 
-//COLOR PANEL
-function yellowCss(index, length) {
-    notesObj[index].titleColor='#ffff87';
-    notesObj[index].notesColor='rgb(255 255 187)';
+//SET THE LOCAL STORAGE
+var colorTitle;
+var colorNotes;
+function setLocalStorage(index, length,colorTitle,colorNotes) {
+    notesObj[index].titleColor=colorTitle;
+    notesObj[index].notesColor=colorNotes;
     localStorage.setItem("notes",JSON.stringify(notesObj));
-    document.getElementById(index).style.backgroundColor = '#ffff87';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(255 255 187)';
-}
-function orangeCss(index, length) {
-    notesObj[index].titleColor='#ffc862';
-    notesObj[index].notesColor='rgb(255 227 174)';
-    localStorage.setItem("notes",JSON.stringify(notesObj));
-    index.innerHTML=document.getElementById(index).style.backgroundColor = '#ffc862';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(255 227 174)';
-}
-function pinkCss(index, length) {
-    notesObj[index].titleColor='#ffc0cb';
-    notesObj[index].notesColor='rgb(255 227 232)';
-    localStorage.setItem("notes",JSON.stringify(notesObj));
-    document.getElementById(index).style.backgroundColor = '#ffc0cb';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(255 227 232)';
-}
-function greenCss(index, length) {
-    notesObj[index].titleColor='#89ff89';
-    notesObj[index].notesColor='rgb(191 255 191)';
-    localStorage.setItem("notes",JSON.stringify(notesObj));
-    document.getElementById(index).style.backgroundColor = '#89ff89';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(191 255 191)';
-}
-function blueCss(index, length) {
-    notesObj[index].titleColor='#94e8ff';
-    notesObj[index].notesColor='rgb(207 245 255)';
-    localStorage.setItem("notes",JSON.stringify(notesObj));
-    document.getElementById(index).style.backgroundColor = '#94e8ff';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(207 245 255)';
-}
-function grayCss(index, length) {
-    notesObj[index].titleColor='#bdbdbd';
-    notesObj[index].notesColor='rgb(230 230 230)';
-    localStorage.setItem("notes",JSON.stringify(notesObj));
-    document.getElementById(index).style.backgroundColor = '#bdbdbd';
-    document.getElementById(index + length + 1).style.backgroundColor = 'rgb(230 230 230)';
+    index.innerHTML=document.getElementById(index).style.backgroundColor =colorTitle;
+    document.getElementById(index + length + 1).style.backgroundColor = colorNotes;
 }
