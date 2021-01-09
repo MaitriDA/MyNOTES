@@ -1,5 +1,7 @@
 # MyNOTES
 A simple and minimalistic Notes website to add and delete short notes with some exciting and useful features made using JavaScript
+<br>
+<br>
 Key Features
 1) **Date** - Keep a track of yor notes.
 2) **Search**- Quick and Easy access of the notes.
