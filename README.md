@@ -12,4 +12,8 @@ The date on which the note was added is displayed on the bottom right corner of 
 
 # Search
 Type the key-word in the search box, the notes havig that particular key-word will only be displayed.
-![Search]()
+![Search](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/search.JPG)
+
+# Color
+Click on the slider Icon to open the color panel .Click on the color you want.
+![Search](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/Color.JPG)
