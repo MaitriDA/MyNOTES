@@ -76,12 +76,6 @@ addBtn.addEventListener("click", function (e) {
     showNotes();
 })
 
-// var colorP = localStorage.getItem("notes");
-// var colorPanel = JSON.parse(colorP);
-// console.log("colorPanel", colorPanel[2]);
-// var colorPanelObject = colorPanel[1];
-// console.log(colorPanelObject.title);
-
 //DISPLAY THE NOTES IN TEH NOTES SECTION
 function showNotes() {
 
@@ -94,7 +88,6 @@ function showNotes() {
     }
     let html = "";
     notesObj.forEach(function (element, index) {
-        var defaultColorTitle='#ffff87';
         var getTitleFronLS=notesObj[index].titleColor;
         let newTitleColor;
         let newNotesColor;
@@ -193,7 +186,6 @@ search.addEventListener("input", function () {
     })
 })
 
-console.log(notesObj);
 //COLOR PANEL
 function yellowCss(index, length) {
     notesObj[index].titleColor='#ffff87';
