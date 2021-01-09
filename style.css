@@ -105,23 +105,6 @@ header{
 
 
 /* DISPLAY NOTES SECTION */
-.delete{
-    display: flex;
-    color: black;
-    height: 35px;
-    width: 80px;
-    margin: auto;
-    background-color: white;
-    outline: none;
-    border: none;
-    margin: 15px;
-    margin-bottom: 0px;
-    margin-left: 100px;
-}
-.delete:hover{
-    color: red;
-}
-
 .cardTitle{ 
     padding: 5px; 
     font-size: 1.5rem; 
@@ -182,6 +165,8 @@ header{
     margin-left: 70px;
     opacity: 0;
 }
+
+/* COLOR PANEL */
 .hamburgerLines{
     width: 20px;
     height: 20px;
@@ -238,6 +223,7 @@ header{
 .active{
     border: 0.5px solid black;
 }
+
 .yellow{
     background-color: #ffff87;
 }
@@ -255,4 +241,21 @@ header{
 }
 .gray{
     background-color: #bdbdbd;
+}
+
+.delete{
+    display: flex;
+    color: black;
+    height: 35px;
+    width: 80px;
+    margin: auto;
+    background-color: white;
+    outline: none;
+    border: none;
+    margin: 15px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+}
+.delete:hover{
+    color: red;
 }
