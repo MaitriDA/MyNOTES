@@ -105,16 +105,21 @@ header{
 
 
 /* DISPLAY NOTES SECTION */
-.delete:hover{
-    background-color: rgb(255, 0, 0);
-    color: white;
-}
 .delete{
-    color: rgb(255, 0, 0);
-    display: block;
-    margin: auto;
+    display: flex;
+    color: black;
     height: 35px;
-    width: 50px;
+    width: 80px;
+    margin: auto;
+    background-color: white;
+    outline: none;
+    border: none;
+    margin: 15px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+}
+.delete:hover{
+    color: red;
 }
 
 .cardTitle{ 

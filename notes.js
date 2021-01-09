@@ -129,7 +129,7 @@ function showNotes() {
                             <button id="blue" class='colorPick blue' onclick="blueCss(${index},${notesObj.length})"></button>
                             <button id="gray" class='colorPick gray' onclick="grayCss(${index},${notesObj.length})"></button>
                         </div>
-                        <button id="${index}" onclick="deleteNote(this.id)" class="delete">delete</button>
+                        <button id="${index}" onclick="deleteNote(this.id)" class="delete"><i class="fa fa-trash-o"> DELETE</i></button>
                     </div>
                     <div class="hamburgerLines">
                         <span class="line line1"></span>
