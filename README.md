@@ -3,7 +3,7 @@ A simple and minimalistic Notes website to add and delete short notes with some 
 <br>
 <br>
 Key Features
-1) **Date** - Keep a track of yor notes.
+1) **Date** - Keep a track of your notes.
 2) **Search**- Quick and Easy access of the notes.
 3) **Color**- Keep the notes in an organised and attractive way.
 <hr>
