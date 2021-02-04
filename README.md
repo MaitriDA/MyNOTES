@@ -6,6 +6,7 @@ Key Features
 1) **Date** - Keep a track of your notes.
 2) **Search**- Quick and Easy access of the notes.
 3) **Color**- Keep the notes in an organised and attractive way.
+4) **Responsive**
 
 # Website Link
 https://create-my-notes.herokuapp.com/
@@ -24,6 +25,5 @@ Click on the slider Icon to open the color panel .Click on the color you want.
 ![Search](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/Color.JPG)
 
 # Future To-Dos
-1) Making it responsive
-2) Adding auto scroll
-3) Sorting algorithm according to topics and date.
+1) Adding auto scroll
+2) Sorting algorithm according to topics and date.
