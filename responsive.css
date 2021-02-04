@@ -1,0 +1,17 @@
+header{
+    border: 2px solid;
+    background-color: black;
+    width: 100%;
+    height: 140px;
+    opacity: 0.52;
+    display: block;
+}
+#brandName{
+    float: top;
+    text-align: center;
+}
+.resSearch{
+    display: block;
+    margin: auto;
+    width: 400px;
+}
