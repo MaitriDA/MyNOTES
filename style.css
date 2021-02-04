@@ -150,7 +150,7 @@ header{
     padding-top: 15px;
 }
 .titleBar{
-    background-color:  #ffff87;
+    background-color:  black;
     display: flex;
     justify-content: space-between;
 }
