@@ -25,7 +25,7 @@ header{
     justify-content: space-between;
 }
 #brandName{
-    color: rgb(243, 243, 243);
+    color: red;
     opacity: 1;
     font-size: 40px;
     margin-left: 15px;
