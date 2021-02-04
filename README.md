@@ -9,7 +9,7 @@ Key Features
 4) **Responsive**
 
 # Website Link
-https://create-my-notes.herokuapp.com/
+https://add-my-notes.herokuapp.com/
 <hr>
 
 # Date
