@@ -117,7 +117,7 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:left;
+    justify-content:center;
 }
 .notesArea{
     margin-left: 50px;
