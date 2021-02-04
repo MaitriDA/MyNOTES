@@ -65,7 +65,7 @@ header{
     border: 1px solid #b7956f;
     display: block;
     margin: auto;
-    width: 30%;
+    width: 400px;
     margin-top: 15px;
 }
 .textArea{
@@ -117,7 +117,7 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
 }
 .notesArea{
     margin-left: 50px;
