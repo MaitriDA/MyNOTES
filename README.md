@@ -24,6 +24,9 @@ Type the key-word in the search box, the notes havig that particular key-word wi
 Click on the slider Icon to open the color panel .Click on the color you want.
 ![Search](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/Color.JPG)
 
+# Responsive
+![Search](https://raw.githubusercontent.com/MaitriDA/MyNOTES/master/ScreenShots%20and%20Demo%20Videos/responsive.JPG)
+
 # Future To-Dos
 1) Adding auto scroll
 2) Sorting algorithm according to topics and date.
